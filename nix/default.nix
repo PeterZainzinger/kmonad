@@ -1,5 +1,5 @@
 let
   # config = import ./config.nix;
-  pkgs   = import (import ./pinned-nixpkgs.nix) {};
+  pkgs = import <nixpkgs> { };
   kmonad = import ./kmonad.nix;
-in with pkgs.haskellPackages; callPackage kmonad {}
+in with pkgs.haskellPackages; callPackage kmonad { }
